@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dahlias Greenhouse — Florist</title>
-<meta name="description" content="Dahlias Greenhouse is a boutique florist run by Michelle. Luxury rose bouquets, hat box arrangements, and custom designs, hand-wrapped to order. Call or text 984-239-5628.">
+<title>Dahlias Greenhouse — Atlanta Floral Design Studio</title>
+<meta name="description" content="Dahlias Greenhouse is an Atlanta floral design studio. Custom bouquets, weddings, events, statement floral installations, and our mobile Bloom Bar. Serving Atlanta and surrounding areas — call or text 984-239-5628.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -98,7 +98,7 @@
   .eyebrow-leaf { font-family:Jost,sans-serif; font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:var(--leaf); }
   .about-copy h2 { margin:0; font-weight:300; font-size:clamp(30px,3.2vw,44px); line-height:1.15; }
   .about-copy p { margin:0; font-size:19px; line-height:1.65; color:var(--muted); text-wrap:pretty; }
-  .signature { font-family:Parisienne,cursive; font-size:34px; color:var(--pink); }
+  .about-copy p.signature { font-family:Parisienne,cursive; font-size:34px; color:var(--pink); }
 
   /* Order */
   .order { padding:0 6vw 9vh; }
@@ -127,6 +127,47 @@
   .site-footer .brand { gap:10px; }
   .footer-links { display:flex; gap:24px; flex-wrap:wrap; }
 
+  /* Mobile */
+  @media (max-width: 760px) {
+    .site-header { flex-direction:column; gap:14px; text-align:center; padding:18px 6vw; }
+    .site-nav { gap:20px; justify-content:center; }
+
+    .hero { padding:4vh 6vw 5vh; gap:34px; }
+    .hero-copy { align-items:center; text-align:center; margin:0 auto; gap:20px; }
+    .hero-logo { width:230px; height:230px; margin:-18px auto -4px; }
+    h1 { font-size:clamp(32px,8.6vw,44px); }
+    .lede { max-width:38ch; margin:0 auto; }
+    .btn-row { justify-content:center; width:100%; }
+    .btn { justify-content:center; }
+    .hero-image { max-width:420px; width:100%; margin:0 auto; border-radius:180px 180px 18px 18px; }
+
+    .trust { flex-direction:column; justify-content:center; gap:9px; text-align:center; padding-bottom:5vh; }
+    .trust .rule, .trust .floret-pink, .trust .floret-leaf { display:none; }
+
+    .shop { padding-bottom:6vh; }
+    .h2-script, .eyebrow-line { text-align:center; }
+    .eyebrow-line { margin-bottom:28px; }
+
+    .gallery { padding:6vh 6vw; }
+    .gallery-head { flex-direction:column; align-items:center; text-align:center; gap:10px; }
+    .tile-offset { margin-top:0; }
+
+    .about { padding:6vh 6vw; gap:32px; text-align:center; }
+    .portrait { margin:0 auto; max-width:320px; }
+    .about-copy { align-items:center; margin:0 auto; }
+
+    .order { padding-bottom:6vh; }
+    .order-card { gap:32px; }
+    .order-left { align-items:center; text-align:center; }
+    .steps { text-align:left; width:100%; }
+    .contact { align-items:center; text-align:center; width:100%; }
+
+    .site-footer { flex-direction:column; justify-content:center; text-align:center; gap:18px; }
+    .site-footer .brand { justify-content:center; }
+    .site-footer .brand .dot { display:none; }
+    .footer-links { justify-content:center; }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .hero-logo { animation: none; }
     * { transition: none !important; }
@@ -142,9 +183,9 @@
       <span class="brand-name">Dahlias Greenhouse</span>
     </div>
     <nav class="site-nav">
-      <a href="#shop">Flowers</a>
-      <a href="#about">Michelle</a>
-      <a href="#order">Order</a>
+      <a href="#services">Services</a>
+      <a href="#about">Our story</a>
+      <a href="#book">Book</a>
       <a class="phone" href="tel:9842395628">984-239-5628</a>
     </nav>
   </header>
@@ -152,10 +193,10 @@
   <section class="hero">
     <div class="hero-copy">
       <img class="hero-logo" src="./assets/dahlias-logo.png" alt="Dahlias Greenhouse Florist" width="290" height="290">
-      <h1>Luxury roses, <span class="script">hand-wrapped</span> for the big moments.</h1>
-      <p class="lede">A boutique florist run by Michelle. Statement rose bouquets, hat box arrangements, and custom designs — built by hand, one order at a time.</p>
+      <h1>Atlanta florals, designed to be <span class="script">unforgettable</span>.</h1>
+      <p class="lede">A floral design studio turning flowers into experiences — custom bouquets, weddings, events, statement installations, and our mobile Bloom Bar.</p>
       <div class="btn-row">
-        <a class="btn btn-primary" href="tel:9842395628">Call or text Michelle</a>
+        <a class="btn btn-primary" href="tel:9842395628">Call or text us</a>
         <a class="btn btn-secondary" href="https://www.instagram.com/dahliasgreenhouse" target="_blank" rel="noopener">See this week on Instagram</a>
       </div>
     </div>
@@ -166,52 +207,52 @@
 
   <div class="trust">
     <span class="rule"></span>
-    <span>Premium roses</span>
+    <span>Atlanta &amp; surrounding areas</span>
     <span class="floret-pink">✿</span>
-    <span>Wrapped by hand</span>
+    <span>Weddings &amp; events</span>
     <span class="floret-leaf">✿</span>
-    <span>Local delivery</span>
+    <span>Mobile Bloom Bar</span>
     <span class="rule"></span>
   </div>
 
-  <section class="shop" id="shop">
-    <h2 class="h2-script">What Michelle makes</h2>
-    <p class="eyebrow-line">Every piece made to order — just say the occasion</p>
+  <section class="shop" id="services">
+    <h2 class="h2-script">What we create</h2>
+    <p class="eyebrow-line">Every piece designed to order — just tell us the occasion</p>
     <div class="card-grid">
 
       <div class="card">
-        <div class="card-img"><img src="./assets/red-white.jpg" alt="Red and white roses with satin bows" loading="lazy"></div>
+        <div class="card-img"><img src="./assets/red-white.jpg" alt="Red and white roses hand-wrapped with satin bows" loading="lazy"></div>
         <div class="card-body">
-          <h3>Signature Wrapped Bouquet</h3>
-          <p>Classic roses in your colors, finished with satin bows and matte wrap. Choose 25, 50, or 100 stems.</p>
-          <span class="terms">Priced by stem count</span>
+          <h3>Custom Bouquets</h3>
+          <p>Hand-wrapped arrangements built around your colors, your occasion, and the person receiving them — soft and romantic or bold and unexpected.</p>
+          <span class="terms">Made to order</span>
         </div>
       </div>
 
       <div class="card">
         <div class="card-img"><img src="./assets/blush.jpg" alt="Blush and cream roses with pearl-trimmed wrap" loading="lazy"></div>
         <div class="card-body">
-          <h3>Blush &amp; Pearl</h3>
-          <p>Soft pinks and creams in a pearl-trimmed tulle wrap. The sweet one — showers, birthdays, new babies.</p>
-          <span class="terms">Ask Michelle</span>
+          <h3>Weddings</h3>
+          <p>Bridal and bridesmaid bouquets, boutonnieres, and ceremony florals, designed around the day you've already imagined.</p>
+          <span class="terms">Book your date early</span>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-img"><img src="./assets/red-grand.jpg" alt="Grand bouquet of one hundred red roses with crystal pins" style="object-position:center 55%" loading="lazy"></div>
+        <div class="card-img"><img src="./assets/red-grand.jpg" alt="Large-scale floral arrangement of red roses" style="object-position:center 55%" loading="lazy"></div>
         <div class="card-body">
-          <h3>The Grand Gesture</h3>
-          <p>100+ roses, crystal pins, layered black-and-gold wrap. For proposals, anniversaries, and big apologies.</p>
-          <span class="terms">Order 3 days ahead</span>
+          <h3>Events &amp; Installations</h3>
+          <p>Statement floral installations and event styling that change how a room feels — from intimate dinners to full brand activations.</p>
+          <span class="terms">Custom quote</span>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-img"><img src="./assets/glitter.jpg" alt="Glitter-dipped silver and green roses in black wrap" loading="lazy"></div>
+        <div class="card-img"><img src="./assets/glitter.jpg" alt="Silver and green roses styled for an event" loading="lazy"></div>
         <div class="card-body">
-          <h3>Glitter &amp; Custom Color</h3>
-          <p>Roses dipped in glitter or tinted to your team colors. Graduations, birthdays, game days.</p>
-          <span class="terms">Any color you want</span>
+          <h3>The Bloom Bar</h3>
+          <p>Our signature mobile bloom bar. Guests build their own bouquets on site — a favorite for parties, showers, pop-ups, and brand events.</p>
+          <span class="terms">We come to you</span>
         </div>
       </div>
 
@@ -233,47 +274,47 @@
 
   <section class="about" id="about">
     <div class="portrait">
-      <img src="./assets/michelle.jpg" alt="Michelle, owner and florist at Dahlias Greenhouse" loading="lazy">
+      <img src="./assets/michelle.jpg" alt="The founder of Dahlias Greenhouse at a floral event" loading="lazy">
     </div>
     <div class="about-copy">
-      <span class="eyebrow-leaf">Hi, I'm Michelle</span>
-      <h2>I build every bouquet myself, stem by stem.</h2>
-      <p>Dahlias Greenhouse is my studio. I source premium roses, wrap and pin everything by hand the day it goes out, and deliver it myself so it arrives looking exactly like the photo.</p>
-      <p>Not sure what to order? Tell me the occasion, the colors, and your budget — I'll design something for it and send you a photo before it leaves.</p>
-      <p class="signature">Michelle</p>
+      <span class="eyebrow-leaf">Our story</span>
+      <h2>Founded in 2022, on one simple idea.</h2>
+      <p>Dahlias Greenhouse began with a love for creating beautiful, one-of-a-kind arrangements. It has grown into an Atlanta studio designing custom bouquets, weddings, events, statement installations, and our signature mobile Bloom Bar.</p>
+      <p>Our designs aren't limited to one style. From soft and romantic to bold, colorful, and unexpected, every piece is made to complement the person, event, or experience behind it — with one goal: create something people remember.</p>
+      <p class="signature">Dahlias Greenhouse</p>
     </div>
   </section>
 
-  <section class="order" id="order">
+  <section class="order" id="book">
     <div class="order-card">
       <div class="order-left">
-        <h2>How to order</h2>
+        <h2>How to book</h2>
         <div class="steps">
           <div class="step">
             <span class="badge">1</span>
-            <p><span class="lead">Call or text</span> — tell me the occasion, your budget, and the date.</p>
+            <p><span class="lead">Reach out</span> — tell us the occasion, the date, and your budget.</p>
           </div>
           <div class="step">
             <span class="badge">2</span>
-            <p><span class="lead">I'll design it</span> — and send you a photo for approval before it goes out.</p>
+            <p><span class="lead">We design it</span> — and send you a concept or photo for approval before anything goes out.</p>
           </div>
           <div class="step">
             <span class="badge">3</span>
-            <p><span class="lead">Pick up or delivery</span> — 48 hours notice is ideal for large pieces, but always ask.</p>
+            <p><span class="lead">Delivery or setup</span> — we deliver, install, and set up the Bloom Bar across Atlanta and surrounding areas.</p>
           </div>
         </div>
       </div>
       <div class="contact">
-        <span class="eyebrow-faint">Talk to Michelle</span>
+        <span class="eyebrow-faint">Talk to us</span>
         <a class="big-phone" href="tel:9842395628">984-239-5628</a>
-        <p>Texts are best — send a photo of something you like and I'll tell you exactly what it takes.</p>
+        <p>Texts are best — send a photo of something you like and your date, and we'll tell you exactly what it takes.</p>
         <a class="ig-link" href="https://www.instagram.com/dahliasgreenhouse" target="_blank" rel="noopener">@dahliasgreenhouse</a>
       </div>
     </div>
   </section>
 
   <footer class="site-footer">
-    <span class="brand"><span class="dot dot-leaf"></span>Dahlias Greenhouse · Florist</span>
+    <span class="brand"><span class="dot dot-leaf"></span>Dahlias Greenhouse · Atlanta, Georgia</span>
     <span class="footer-links">
       <a href="tel:9842395628">984-239-5628</a>
       <a href="https://www.instagram.com/dahliasgreenhouse" target="_blank" rel="noopener">Instagram</a>
@@ -281,5 +322,20 @@
   </footer>
 
 </div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Florist",
+  "name": "Dahlias Greenhouse",
+  "description": "Atlanta floral design studio specializing in custom bouquets, weddings, events, statement floral installations, and a signature mobile Bloom Bar.",
+  "foundingDate": "2022",
+  "telephone": "+1-984-239-5628",
+  "url": "https://dahlias-greenhouse.vercel.app",
+  "image": "https://dahlias-greenhouse.vercel.app/assets/dahlias-logo.png",
+  "sameAs": ["https://www.instagram.com/dahliasgreenhouse"],
+  "address": { "@type": "PostalAddress", "addressLocality": "Atlanta", "addressRegion": "GA", "addressCountry": "US" },
+  "areaServed": "Atlanta, Georgia and surrounding areas"
+}
+</script>
 </body>
 </html>
