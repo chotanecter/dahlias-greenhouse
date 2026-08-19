@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dahlias Greenhouse — Florist</title>
+<meta name="description" content="Dahlias Greenhouse is a boutique florist run by Michelle. Luxury rose bouquets, hat box arrangements, and custom designs, hand-wrapped to order. Call or text 984-239-5628.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="./assets/dahlias-logo.jpg">
+<style>
+  :root {
+    --cream:#fbf6f0; --pink:#e1457e; --pink-hover:#c93a6d; --link-hover:#b62f60;
+    --blush:#fdeef1; --petal:#f8cbc9; --leaf:#52a447; --ink:#2c2723;
+    --muted:#6b625b; --faint:#a3968c; --hairline:#f0e3da; --card-border:#f4e7de;
+    --btn-border:#e8d4c8;
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--cream); -webkit-font-smoothing:antialiased; }
+  a { color:var(--pink); text-decoration:none; transition:color .18s ease, border-color .18s ease, background-color .18s ease; }
+  a:hover { color:var(--link-hover); }
+  img { display:block; }
+  @keyframes sway { 0%,100% { transform: rotate(-2deg) } 50% { transform: rotate(2deg) } }
+
+  .page { background:var(--cream); color:var(--ink); font-family:'Cormorant Garamond',Georgia,serif; overflow-x:hidden; }
+
+  /* Header */
+  .site-header { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:20px 6vw;
+    font-family:Jost,sans-serif; font-size:12px; letter-spacing:.22em; text-transform:uppercase;
+    color:var(--muted); border-bottom:1px solid var(--hairline); }
+  .brand { display:flex; align-items:center; gap:10px; }
+  .dot { width:7px; height:7px; border-radius:50%; background:var(--pink); display:inline-block; }
+  .dot-leaf { background:var(--leaf); }
+  .brand-name { color:var(--ink); }
+  .site-nav { display:flex; gap:28px; align-items:center; flex-wrap:wrap; }
+  .site-nav a { color:var(--muted); }
+  .site-nav a.phone { color:var(--pink); }
+  .site-nav a:hover { color:var(--pink); }
+  .site-nav a.phone:hover { color:var(--link-hover); }
+
+  /* Hero */
+  .hero { display:grid; grid-template-columns:repeat(auto-fit,minmax(330px,1fr)); align-items:center; gap:5vw; padding:6vh 6vw 7vh; }
+  .hero-copy { display:flex; flex-direction:column; align-items:flex-start; gap:26px; max-width:560px; }
+  .hero-logo { width:290px; height:290px; max-width:100%; object-fit:cover; object-position:center 58%;
+    margin:-40px 0 -10px -18px; animation:sway 9s ease-in-out infinite; transform-origin:50% 90%; }
+  h1 { margin:0; font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(38px,4.6vw,64px);
+    line-height:1.06; letter-spacing:-.01em; }
+  .script { font-family:Parisienne,cursive; color:var(--pink); font-size:1.12em; line-height:1; white-space:nowrap; }
+  .lede { margin:0; font-size:19px; line-height:1.6; color:var(--muted); max-width:44ch; text-wrap:pretty; }
+  .btn-row { display:flex; flex-wrap:wrap; gap:12px; align-items:center; }
+  .btn { display:inline-flex; align-items:center; gap:10px; border-radius:999px;
+    font-family:Jost,sans-serif; font-size:13px; letter-spacing:.14em; text-transform:uppercase; }
+  .btn-primary { background:var(--pink); color:#fff; padding:15px 28px; }
+  .btn-primary:hover { background:var(--pink-hover); color:#fff; }
+  .btn-secondary { border:1px solid var(--btn-border); color:var(--ink); padding:14px 26px; background:#fff; }
+  .btn-secondary:hover { border-color:var(--pink); color:var(--pink); }
+  .hero-image { position:relative; aspect-ratio:4/5; border-radius:220px 220px 18px 18px; overflow:hidden; background:var(--petal); }
+  .hero-image img { width:100%; height:100%; object-fit:cover; object-position:center 40%; }
+
+  /* Trust strip */
+  .trust { display:flex; align-items:center; justify-content:center; gap:18px; padding:0 6vw 6vh;
+    font-family:Jost,sans-serif; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--faint); }
+  .rule { flex:1; height:1px; background:var(--hairline); }
+  .floret-pink { color:var(--pink); }
+  .floret-leaf { color:var(--leaf); }
+
+  /* Products */
+  .shop { padding:0 6vw 8vh; }
+  .h2-script { margin:0 0 6px; font-family:Parisienne,cursive; font-size:clamp(34px,3.6vw,50px); font-weight:400; color:var(--ink); }
+  .eyebrow-line { margin:0 0 38px; font-family:Jost,sans-serif; font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--faint); }
+  .card-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr)); gap:26px; }
+  .card { display:flex; flex-direction:column; gap:16px; background:#fff; border:1px solid var(--card-border);
+    border-radius:18px; padding:18px; transition:border-color .18s ease; }
+  .card:hover { border-color:var(--petal); }
+  .card-img { aspect-ratio:1/1; border-radius:12px; overflow:hidden; background:var(--blush); }
+  .card-img img { width:100%; height:100%; object-fit:cover; object-position:center; }
+  .card-body { display:flex; flex-direction:column; gap:6px; }
+  .card-body h3 { margin:0; font-size:24px; font-weight:500; }
+  .card-body p { margin:0; font-size:16px; line-height:1.55; color:var(--muted); }
+  .terms { font-family:Jost,sans-serif; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--pink); margin-top:6px; }
+
+  /* Gallery */
+  .gallery { background:var(--blush); padding:8vh 6vw; }
+  .gallery-head { display:flex; align-items:baseline; justify-content:space-between; gap:20px; flex-wrap:wrap; margin-bottom:32px; }
+  .gallery-head h2 { margin:0; font-family:Parisienne,cursive; font-size:clamp(32px,3.4vw,46px); font-weight:400; }
+  .gallery-head a { font-family:Jost,sans-serif; font-size:12px; letter-spacing:.2em; text-transform:uppercase; }
+  .gallery-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr)); gap:18px; }
+  .tile { aspect-ratio:1/1; border-radius:14px; overflow:hidden; background:var(--petal); }
+  .tile img { width:100%; height:100%; object-fit:cover; }
+  .tile-offset { margin-top:26px; }
+
+  /* About */
+  .about { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:5vw; align-items:center; padding:9vh 6vw; }
+  .portrait { position:relative; aspect-ratio:1/1; border-radius:50%; overflow:hidden; background:var(--petal); max-width:420px; }
+  .portrait img { width:100%; height:100%; object-fit:cover; object-position:52% 18%; }
+  .about-copy { display:flex; flex-direction:column; gap:20px; max-width:56ch; }
+  .eyebrow-leaf { font-family:Jost,sans-serif; font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:var(--leaf); }
+  .about-copy h2 { margin:0; font-weight:300; font-size:clamp(30px,3.2vw,44px); line-height:1.15; }
+  .about-copy p { margin:0; font-size:19px; line-height:1.65; color:var(--muted); text-wrap:pretty; }
+  .signature { font-family:Parisienne,cursive; font-size:34px; color:var(--pink); }
+
+  /* Order */
+  .order { padding:0 6vw 9vh; }
+  .order-card { background:#fff; border:1px solid var(--card-border); border-radius:26px; padding:clamp(28px,4vw,54px);
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:5vw; align-items:center; }
+  .order-left { display:flex; flex-direction:column; gap:22px; }
+  .order-left h2 { margin:0; font-family:Parisienne,cursive; font-size:clamp(32px,3.4vw,46px); font-weight:400; }
+  .steps { display:flex; flex-direction:column; gap:18px; }
+  .step { display:flex; gap:16px; align-items:flex-start; }
+  .badge { flex:0 0 30px; height:30px; border-radius:50%; background:var(--blush); color:var(--pink);
+    display:grid; place-items:center; font-family:Jost,sans-serif; font-size:13px; }
+  .step p { margin:0; font-size:18px; line-height:1.55; color:var(--muted); }
+  .step p .lead { color:var(--ink); }
+  .contact { display:flex; flex-direction:column; gap:14px; align-items:flex-start; background:var(--cream);
+    border-radius:18px; padding:clamp(24px,3vw,38px); }
+  .eyebrow-faint { font-family:Jost,sans-serif; font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:var(--faint); }
+  .contact .big-phone { font-size:clamp(30px,3.4vw,44px); font-weight:400; letter-spacing:-.01em; line-height:1.1; }
+  .contact p { margin:0; font-size:17px; line-height:1.6; color:var(--muted); }
+  .ig-link { font-family:Jost,sans-serif; font-size:13px; letter-spacing:.14em; text-transform:uppercase;
+    border-bottom:1px solid var(--petal); padding-bottom:3px; }
+
+  /* Footer */
+  .site-footer { border-top:1px solid var(--hairline); padding:36px 6vw; display:flex; flex-wrap:wrap; gap:16px;
+    align-items:center; justify-content:space-between; font-family:Jost,sans-serif; font-size:12px;
+    letter-spacing:.16em; text-transform:uppercase; color:var(--faint); }
+  .site-footer .brand { gap:10px; }
+  .footer-links { display:flex; gap:24px; flex-wrap:wrap; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-logo { animation: none; }
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="site-header">
+    <div class="brand">
+      <span class="dot"></span>
+      <span class="brand-name">Dahlias Greenhouse</span>
+    </div>
+    <nav class="site-nav">
+      <a href="#shop">Flowers</a>
+      <a href="#about">Michelle</a>
+      <a href="#order">Order</a>
+      <a class="phone" href="tel:9842395628">984-239-5628</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-copy">
+      <img class="hero-logo" src="./assets/dahlias-logo.jpg" alt="Dahlias Greenhouse Florist" width="290" height="290">
+      <h1>Luxury roses, <span class="script">hand-wrapped</span> for the big moments.</h1>
+      <p class="lede">A boutique florist run by Michelle. Statement rose bouquets, hat box arrangements, and custom designs — built by hand, one order at a time.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="tel:9842395628">Call or text Michelle</a>
+        <a class="btn btn-secondary" href="https://www.instagram.com/dahliasgreenhouse" target="_blank" rel="noopener">See this week on Instagram</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="./assets/hatbox.jpg" alt="Luxury hat box arrangement in mauve and cream roses">
+    </div>
+  </section>
+
+  <div class="trust">
+    <span class="rule"></span>
+    <span>Premium roses</span>
+    <span class="floret-pink">✿</span>
+    <span>Wrapped by hand</span>
+    <span class="floret-leaf">✿</span>
+    <span>Local delivery</span>
+    <span class="rule"></span>
+  </div>
+
+  <section class="shop" id="shop">
+    <h2 class="h2-script">What Michelle makes</h2>
+    <p class="eyebrow-line">Every piece made to order — just say the occasion</p>
+    <div class="card-grid">
+
+      <div class="card">
+        <div class="card-img"><img src="./assets/red-white.jpg" alt="Red and white roses with satin bows" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Signature Wrapped Bouquet</h3>
+          <p>Classic roses in your colors, finished with satin bows and matte wrap. Choose 25, 50, or 100 stems.</p>
+          <span class="terms">Priced by stem count</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img"><img src="./assets/blush.jpg" alt="Blush and cream roses with pearl-trimmed wrap" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Blush &amp; Pearl</h3>
+          <p>Soft pinks and creams in a pearl-trimmed tulle wrap. The sweet one — showers, birthdays, new babies.</p>
+          <span class="terms">Ask Michelle</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img"><img src="./assets/red-grand.jpg" alt="Grand bouquet of one hundred red roses with crystal pins" style="object-position:center 55%" loading="lazy"></div>
+        <div class="card-body">
+          <h3>The Grand Gesture</h3>
+          <p>100+ roses, crystal pins, layered black-and-gold wrap. For proposals, anniversaries, and big apologies.</p>
+          <span class="terms">Order 3 days ahead</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img"><img src="./assets/glitter.jpg" alt="Glitter-dipped silver and green roses in black wrap" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Glitter &amp; Custom Color</h3>
+          <p>Roses dipped in glitter or tinted to your team colors. Graduations, birthdays, game days.</p>
+          <span class="terms">Any color you want</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="gallery">
+    <div class="gallery-head">
+      <h2>From the greenhouse</h2>
+      <a href="https://www.instagram.com/dahliasgreenhouse" target="_blank" rel="noopener">@dahliasgreenhouse →</a>
+    </div>
+    <div class="gallery-grid">
+      <div class="tile"><img src="./assets/hatbox.jpg" alt="Mauve and cream hat box arrangement" style="object-position:center 30%" loading="lazy"></div>
+      <div class="tile tile-offset"><img src="./assets/red-grand.jpg" alt="One hundred red roses" style="object-position:center 45%" loading="lazy"></div>
+      <div class="tile"><img src="./assets/blush.jpg" alt="Blush roses with pearl trim" style="object-position:center 60%" loading="lazy"></div>
+      <div class="tile tile-offset"><img src="./assets/glitter.jpg" alt="Glitter roses" style="object-position:center 40%" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="portrait">
+      <img src="./assets/michelle.jpg" alt="Michelle, owner and florist at Dahlias Greenhouse" loading="lazy">
+    </div>
+    <div class="about-copy">
+      <span class="eyebrow-leaf">Hi, I'm Michelle</span>
+      <h2>I build every bouquet myself, stem by stem.</h2>
+      <p>Dahlias Greenhouse is my studio. I source premium roses, wrap and pin everything by hand the day it goes out, and deliver it myself so it arrives looking exactly like the photo.</p>
+      <p>Not sure what to order? Tell me the occasion, the colors, and your budget — I'll design something for it and send you a photo before it leaves.</p>
+      <p class="signature">Michelle</p>
+    </div>
+  </section>
+
+  <section class="order" id="order">
+    <div class="order-card">
+      <div class="order-left">
+        <h2>How to order</h2>
+        <div class="steps">
+          <div class="step">
+            <span class="badge">1</span>
+            <p><span class="lead">Call or text</span> — tell me the occasion, your budget, and the date.</p>
+          </div>
+          <div class="step">
+            <span class="badge">2</span>
+            <p><span class="lead">I'll design it</span> — and send you a photo for approval before it goes out.</p>
+          </div>
+          <div class="step">
+            <span class="badge">3</span>
+            <p><span class="lead">Pick up or delivery</span> — 48 hours notice is ideal for large pieces, but always ask.</p>
+          </div>
+        </div>
+      </div>
+      <div class="contact">
+        <span class="eyebrow-faint">Talk to Michelle</span>
+        <a class="big-phone" href="tel:9842395628">984-239-5628</a>
+        <p>Texts are best — send a photo of something you like and I'll tell you exactly what it takes.</p>
+        <a class="ig-link" href="https://www.instagram.com/dahliasgreenhouse" target="_blank" rel="noopener">@dahliasgreenhouse</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <span class="brand"><span class="dot dot-leaf"></span>Dahlias Greenhouse · Florist</span>
+    <span class="footer-links">
+      <a href="tel:9842395628">984-239-5628</a>
+      <a href="https://www.instagram.com/dahliasgreenhouse" target="_blank" rel="noopener">Instagram</a>
+    </span>
+  </footer>
+
+</div>
+</body>
+</html>
